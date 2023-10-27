@@ -1,12 +1,21 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+
+import Market from './routes/Market';
+import Item from './components/Item';
 
 function App() {
   return (
-    <div className="App">
+    <Router className="App">
       <h1 className="text-3xl font-bold underline">
-        Hello world!
+        APP!
       </h1>
-    </div>
+      <Routes>
+        <Route path='/market' element={<Market />} />
+        <Route path='/item' element={<Item />} />
+      </Routes>
+    </Router>
   );
 }
 
